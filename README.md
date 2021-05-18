@@ -11,7 +11,7 @@ Synology NAS에서 자동으로 Plex 미디어 서버를 업데이트합니다
 # 사용방법
 
 Synology DSM의 작업 스케줄러에 다음 작업을 추가해주세요
-<div align="center">
+<div align="left">
   <img width="65%" height="65%" src="img/img1.png">
 </div>
 
@@ -19,7 +19,7 @@ Synology DSM의 작업 스케줄러에 다음 작업을 추가해주세요
 bash <(curl -s https://raw.githubusercontent.com/kamilake/plexupdate/master/plexupdate.sh)
 ```
 
-<div align="center">
+<div align="left">
   <img width="65%" height="65%" src="img/img2.jpg">
 </div>
 이제 업데이트 주기를 적당하게 (매일 새벽 4시 등) 설정하면 됩니다.
