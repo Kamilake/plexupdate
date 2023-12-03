@@ -21,7 +21,7 @@ then
 echo 최신 버전을 발견했습니다.
 /usr/syno/bin/synonotify PKGHasUpgrade '{"[%HOSTNAME%]": $(hostname), "[%OSNAME%]": "Synology", "[%PKG_HAS_UPDATE%]": "Plex", "[%COMPANY_NAME%]": "Synology"}'
 CPU=$(uname -m)
-url=$(echo "${jq}" | jq -r '.nas."Synology\ \(DSM\ 7\)".releases[] | select(.build=="linux-'"${CPU}"'") | .url')
+url=$(echo "${jq}" | jq -r '.nas."Synology (DSM 7)".releases[] | select(.build=="linux-'"${CPU}"'") | .url')
 /bin/wget $url -P /tmp/plexautoupdatetmpdir/
 /usr/syno/bin/synopkg install /tmp/plexautoupdatetmpdir/*.spk
 sleep 30
