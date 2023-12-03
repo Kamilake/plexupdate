@@ -12,7 +12,7 @@ mkdir -p /tmp/plexautoupdatetmpdir/ > /dev/null 2>&1
 token=$(cat /volume1/PlexMediaServer/AppData/Plex\ Media\ Server/Preferences.xml | grep -oP 'PlexOnlineToken="\K[^"]+')
 url=$(echo "https://plex.tv/api/downloads/5.json?channel=plexpass&X-Plex-Token=$token")
 jq=$(curl -s ${url})
-newversion=$(echo $jq | jq -r .nas.Synology\ \(DSM 7\).version)
+newversion=$(echo $jq | jq -r .nas.\"Synology\ \(DSM 7\)\".version)
 echo 최신 버전: $newversion
 curversion=$(synopkg version PlexMediaServer)
 echo 현재 사용중인 버전: $curversion
